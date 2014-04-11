@@ -1,0 +1,38 @@
+{
+  "swaggerVersion": "1.1",
+  "basePath": "https://api.forecast.io/forecast",
+  "apis": [
+    {
+      "path": "/4e834dca725ed9c0fc5ff19c8ee9a206/{long},{lat}",
+      "operations": [
+        {
+          "httpMethod": "GET",
+          "parameters": [
+            {
+              "name": "long",
+              "paramType": "path",
+              "dataType": "string",
+              "description": "Longitude",
+              "required": true
+            },
+            {
+              "name": "lat",
+              "paramType": "path",
+              "dataType": "string",
+              "description": "Latitude",
+              "required": true
+            }
+          ],
+          "nickname": "4e834dca725ed9c0fc5ff19c8ee9a206/{long},{lat}",
+          "summary": "Get Weather forceast for a latitude and longitude",
+          "errorResponses": [
+            {
+              "code": 200
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {}
+}

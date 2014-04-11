@@ -1,0 +1,44 @@
+{
+  "kind": "discovery#restDescription",
+  "discoveryVersion": "v1",
+  "protocol": "rest",
+  "rootUrl": "https://graph.facebook.com/",
+  "servicePath": "me",
+  "description": "You should get the access token from https://developers.facebook.com/tools/explorer",
+  "title": "Facebook",
+  "schemas": {},
+  "methods": {
+    "Post on my feed": {
+      "description": "This post API will post a message on my news feed using the access token.",
+      "httpMethod": "POST",
+      "path": "/feed",
+      "parameters": {
+        "message": {
+          "type": "string",
+          "location": "query",
+          "description": "The message to post",
+          "required": false
+        },
+        "access_token": {
+          "type": "string",
+          "location": "query",
+          "description": "FB Developer's access token",
+          "required": false
+        }
+      }
+    },
+    "Get my details": {
+      "description": "Get my details",
+      "httpMethod": "GET",
+      "path": "/",
+      "parameters": {
+        "access_token": {
+          "type": "string",
+          "location": "query",
+          "description": "FB developer access token",
+          "required": false
+        }
+      }
+    }
+  }
+}
