@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submission/wadl/wadl.xsd" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="Facebook">You should get the access token from https://developers.facebook.com/tools/explorer</doc>
+  <resources base="https://graph.facebook.com/me">
+    <resource path="/feed">
+      <doc title="Post on my feed">This post API will post a message on my news feed using the access token.</doc>
+      <method name="POST">
+        <request>
+          <param name="message" style="query" type="xs:string">
+            <doc>The message to post</doc>
+          </param>
+          <param name="access_token" style="query" type="xs:string">
+            <doc>FB Developer's access token</doc>
+          </param>
+        </request>
+      </method>
+    </resource>
+    <resource path="/">
+      <doc title="Get my details">Get my details</doc>
+      <method name="GET">
+        <request>
+          <param name="access_token" style="query" type="xs:string">
+            <doc>FB developer access token</doc>
+          </param>
+        </request>
+      </method>
+    </resource>
+  </resources>
+</application>
